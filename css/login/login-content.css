@@ -1,0 +1,110 @@
+/* Import Font Family */
+@import url('../main.css');
+
+
+header {
+    background-color: #F6F6F6;
+    padding: 10px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+header img {
+    height: 60px;
+}
+
+header p {
+    text-align: right;
+}
+
+header p a {
+    color: var(--login-purple-button);
+    font-weight: 700;
+}
+
+/* Section-right and left */
+section {
+    display: flex;
+    /* align-items: center; */
+}
+
+.left-section {
+    width: 50%;
+    height: calc(100vh - 83px);
+    background: url('../../assets/Images/Ekran\ arka\ fon\ resmi.jpg') no-repeat;
+}
+
+.left-blur-section {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #ADAAAA 0%, rgba(122, 122, 122, 0) 100%);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-blur-section>p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 340px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.left-blur-section>h1 {
+    font-weight: 900;
+    font-size: 36px;
+    max-width: 300px;
+}
+
+.left-blur-section img {
+    width: 250px;
+}
+
+/* Right section */
+.right-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--dshb-six-bg-color);
+}
+
+.right-section h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+/* contact */
+.contact {
+    position: relative;
+    bottom: -90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact>p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.contact>.dot {
+    background: var(--dshb-dot-bg-color);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+/* Dropdown menu -> select,option */

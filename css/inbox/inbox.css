@@ -1,0 +1,102 @@
+/* Add reset css */
+@import url("../main.css");
+
+/*! ============= Inbox Container =========== */
+.inbox-container {
+    display: flex;
+}
+
+/*! Inbox Sidebar Content  */
+.inbox-sidebar {
+    border-right: 1px solid #E4E4E4;
+    padding: 50px 37px 0 0;
+    width: 400px;
+}
+
+.inbox-sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.inbox-sidebar-top h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #000000;
+}
+
+.add-user {
+    width: 33px;
+    height: 33px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    border-radius: 5px;
+    border: 1px solid #BABABA;
+    padding: 7px;
+}
+
+/* Sidebar SubMenu */
+.inbox-sidebar-submenu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inbox-sidebar-submenu input {
+    width: 15px;
+    height: 15px;
+    border: none;
+    outline: none;
+    border: 1px solid #1FDAFF;
+}
+
+.inbox-sidebar-submenu p {
+    font-weight: 700;
+    font-size: 17px;
+    flex: 1 1 auto;
+}
+
+.inbox-sidebar-submenu img {
+    transform: rotate(90deg);
+    margin-right: 7px;
+}
+
+/*TODO Sidebar Filter Buttons  */
+.inbox-sidebar-filter-btns {
+    width: 355px;
+    height: 62px;
+    background: #E4FDFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 35px;
+}
+
+.inbox-sidebar-filter-btns button {
+    z-index: 2;
+    cursor: pointer;
+    color: #929292;
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px 50px;
+}
+
+.inbox-sidebar-filter-btns button.btn-active {
+    color: #000000;
+}
+
+.inbox-sidebar-filter-btns div.filter-btn-active{
+    background: #A6FAFF;
+    border-radius: 10px;
+    width: 167px;
+    height: 52px;
+    position: absolute;
+    z-index: 1;
+    left: 5px;
+    transition: all 0.3s ease-in-out;       
+}
