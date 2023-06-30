@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>File Manager</title>
     <!-- Pure CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/file-manager/file-manager.css" />
   </head>
 
   <body>
     <!--! File Manager -->
-    <section class="file-manager file-manager-grid3">
+    <section class="file-manager folder-preview-disabled">
       <!-- ! Folder SideBar -->
       <div class="folder-sidebar">
         <header>
@@ -156,7 +159,7 @@
         </main>
         <footer>
           <div>
-            <img src="./assets/icons/trash-icon.svg" alt="" />
+            <img src="./assets/icons/trash-folder.svg" alt="" />
             Trash
           </div>
           <img src="./assets/icons/chevron-right1.svg" alt="" />
@@ -241,11 +244,11 @@
               </button>
               <button class="export-button">
                 Export
-                <img src="./assets/icons/calendar-next.svg" alt="Calendar" />
+                <img src="./assets/icons/export-btn.svg" alt="Export" />
               </button>
               <button class="inactive-files-button">
                 Inactive Files
-                <img src="./assets/icons/file.svg" alt="" />
+                <img src="./assets/icons/file.svg" alt="File" />
               </button>
               <button class="reload-button">
                 Reload
@@ -275,7 +278,7 @@
                   <tr class="table-header">
                     <th>
                       <div class="name-select-box">
-                        <input type="checkbox" name="" id="" />
+                        <input type="checkbox" name="" id="" class="selectAllCheckBox" />
                         <span>Name</span>
                         <img src="./assets/icons/zeit.svg" alt="bottom icon" />
                       </div>
@@ -307,7 +310,7 @@
                     <th></th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-body">
                   <tr>
                     <td>
                       <div class="name-select-box">
@@ -728,7 +731,7 @@
               <img src="./assets/icons/Edit-icon.svg" alt="Edit icon" />
               Edit
             </div>
-            <div>
+            <div class="preview-delete">
               <img src="./assets/icons/delete-icon.svg" alt="Delete icon" />
               Delete
             </div>
@@ -740,7 +743,7 @@
     <div class="upload-file-modal" id="upload-container">
       <h4>Upload File</h4>
       <div class="close-modal">
-        <img src="./assets/icons/close-icon.svg" alt="close-icon" />
+        <img src="./assets/icons/close.svg" alt="close modal" />
       </div>
       <!-- ? Drop Down Box -->
       <div class="drop-down-box">
@@ -769,7 +772,7 @@
             <span>41 MB</span>
           </div>
           <img
-            src="./assets/icons/trash-icon.svg"
+            src="./assets/icons/trash-folder.svg"
             alt="trash-icon"
             class="trash-icon"
           />
@@ -781,7 +784,7 @@
             <span>4 MB</span>
           </div>
           <img
-            src="./assets/icons/trash-icon.svg"
+            src="./assets/icons/trash-folder.svg"
             alt="trash-icon"
             class="trash-icon"
           />
@@ -805,5 +808,6 @@
     <script src="./js/upload-modal.js"></script>
     <script src="./js/right-click.js"></script>
     <script src="./js/changeDisplay.js"></script>
+    <script src="./js/fileCheckBox.js"></script>
   </body>
 </html>

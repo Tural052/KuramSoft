@@ -4,7 +4,7 @@ const dropdowns = document.querySelectorAll(".dshb-dropdown-menu");
 dropdowns.forEach(menu => {
     menu.addEventListener("click", () => {
         const selectMenu = menu.querySelector(".menu-select"),
-            selectMenuText = selectMenu.querySelector("p"),
+            selectMenuText = selectMenu?.querySelector("p"),
             optionsMenu = menu.querySelectorAll(".menu-option-content");
         //? Select Menu add class
         selectMenu.classList.toggle("dropdown-menu-open");
@@ -20,7 +20,7 @@ dropdowns.forEach(menu => {
 })
 
 const list = document.querySelectorAll(".folder-explorer-list>li")
-console.log(list)
+// console.log(list)
 list.forEach((item) => {
     const li = item.children[1];
     item.addEventListener("click",()=>{
@@ -29,9 +29,8 @@ list.forEach((item) => {
 })
 
 // * Modal Tab
-
 const modalTab = document.querySelectorAll(".dropdown-box");
-console.log(modalTab);
+// console.log(modalTab);
 modalTab.forEach(item => {
     item.addEventListener("click",()=>{
         item.classList.toggle("dropdown-box-active")

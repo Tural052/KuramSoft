@@ -12,4 +12,4 @@ changeDisplayGrid.addEventListener("click", () => {
   listSystem.firstElementChild.style.display = "none";
   gridSystem.style.display = "block";
 });
-console.log(listSystem.firstElementChild);
+// console.log(listSystem.firstElementChild);

@@ -1,31 +1,26 @@
-@import url("../main.css");
-
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL'0,
-        'wght'400,
-        'GRAD'0,
-        'opsz'48
+html{
+    scroll-behavior: smooth;
 }
-
 .container-app-details {
     width: 100%;
     padding: 50px 220px 50px 50px;
+    /* position: relative; */
 }
 
 /* App details Nav Map */
 .app-details-nav-map {
-    position: absolute;
-    right: -176px;
+    position: fixed;
+    right:44px;
+    top: 40%;
+    /* margin-right: -178px; */
+    width: max-content;
 }
 
-.app-details-nav-map-top {
-    top: 504px;
+.nav-map-list a{
+    transition: all ease 0.1s;
 }
-
-.app-details-nav-map-bottom {
-    bottom: 904px;
+.nav-map-list a:hover{
+    color: #00B2BD;
 }
 
 .nav-map-list>li {
@@ -90,6 +85,14 @@
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 0.1px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.container-app-details>nav>a:hover {
+    opacity: 1;
+}
+.container-app-details>nav>img:first-child:hover {
+    opacity: 1; 
 }
 
 .app-details-name {
@@ -120,7 +123,7 @@
 
 .app-details-main {
     border: 1px solid var(--app-li-border-color);
-    position: relative;
+    /* position: relative;   */
 }
 
 /* App details Header */
@@ -237,7 +240,6 @@
 .app-install-button {
     background-color: var(--app-azure-bg-color);
     border: 1px solid var(--app-border-color);
-
 }
 
 .app-install-button:hover {
@@ -251,15 +253,9 @@
     align-items: center;
 }
 
-.state-requared>span:first-child {
-    color: var(--app-red-text-color);
-    border: 1px solid var(--app-red-border-color);
-    border-radius: 100%;
+.state-requared>img {
     width: 22px;
     height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-right: 10px;
 }
 
@@ -274,6 +270,7 @@
 /* ! App Details Overview */
 .app-details-overview {
     padding: 30px;
+ 
 }
 
 .app-details-overview>h3 {
@@ -283,6 +280,7 @@
 }
 
 .app-overview-carusel {
+    position: relative;
     width: 100%;
     height: 263px;
     background-color: var(--app-overview-bg-color);
@@ -293,6 +291,8 @@
     align-items: center;
     justify-content: flex-end;
     padding: 18px;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .app-carusel-circle {
@@ -305,6 +305,34 @@
     border-radius: 100%;
     background-color: var(--carusel-icon-color);
     margin-right: 12px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.app-carusel-circle>div:hover{
+    opacity: 1;
+}
+
+.app-carusel-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    z-index: -1;
+    display: none;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* ? App Overiew Content */
@@ -379,6 +407,7 @@
     border-radius: 30px;
     padding: 27px 40px;
     opacity: 0.4;
+    cursor: no-drop;
 }
 
 .app-additiona-box>h4 {
@@ -419,6 +448,7 @@
 .additional-box-active {
     opacity: 1;
     border-width: 3px;
+    cursor: initial;
 }
 
 /*? Overiew Table */
@@ -459,7 +489,6 @@
 .overiew-table tr:first-child {
     border-bottom-width: 3px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.03);
-
 }
 
 /* ? Overview Needed Applications */
@@ -493,6 +522,7 @@
     border-radius: 10px;
     padding: 11px 33px 11px 11px;
     position: relative;
+    flex:1 1 auto;
 }
 
 .overiew-application-box>img {
@@ -588,7 +618,8 @@
         height: 12px;
         margin-right: 10px;
     }
-    .overview-table-box{
+
+    .overview-table-box {
         padding: 0;
     }
 
@@ -639,111 +670,133 @@
         padding: 8px 35px;
         font-size: 17px;
     }
-    .overview-needed-applications{
+
+    .overview-needed-applications {
         margin: 0;
     }
-    .overiew-application-box{
+
+    .overiew-application-box {
         margin-right: -5px;
     }
-    .overiew-application-box>img{
+
+    .overiew-application-box>img {
         height: 55px;
         width: 55px;
     }
 }
 
 @media only screen and (max-width:992px) {
-    
     .container-app-details {
         padding: 30px 150px 30px 30px;
     }
-    .app-details-nav-map{
+
+    .app-details-nav-map {
         right: -132px;
     }
+
     .app-details-user {
         right: -19px;
     }
-    .app-details-header{
+
+    .app-details-header {
         padding: 20px;
     }
-    .app-details-header{
+
+    .app-details-header {
         gap: 20px;
     }
-    .details-header-left{
+
+    .details-header-left {
         flex-direction: column;
         align-items: center;
         gap: 0;
     }
-    .apps-box-right{
+
+    .apps-box-right {
         margin-right: 0;
     }
-    .apps-box-left>img{
+
+    .apps-box-left>img {
         width: 70px;
         height: 70px;
         padding: 11px;
     }
-    .apps-box-right>.apps-data{
+
+    .apps-box-right>.apps-data {
         font-size: 10px;
     }
-    .apps-box-right>h1{
+
+    .apps-box-right>h1 {
         font-size: 16px;
     }
+
     .apps-users-name,
     .apps-box-right>span:not(.apps-data),
     .details-header-rigth>p,
     .details-header-rigth>ul>li,
     .app-overiew-updates>span,
-    .overiew-updates-list>li{
+    .overiew-updates-list>li {
         font-size: 12px;
     }
-    
-    .details-header-rigth{
+
+    .details-header-rigth {
         margin-right: 0px;
     }
-    .app-details-state{
+
+    .app-details-state {
         padding-right: 20px;
         justify-content: flex-start;
     }
-    .app-carusel-circle>div{
+
+    .app-carusel-circle>div {
         width: 10px;
         height: 10px;
         margin-right: 10px;
     }
+
     .app-details-overview>h3,
-    .app-overiew-updates>h4{
+    .app-overiew-updates>h4 {
         font-size: 16px;
     }
+
     .app-overview-content>img,
-    .app-overiew-updates>img{
+    .app-overiew-updates>img {
         width: 35px;
     }
-    .app-overview-content>p{
+
+    .app-overview-content>p {
         font-size: 14px;
     }
+
     .app-additional-list>li {
         font-size: 10px;
         line-height: 23px;
         gap: 5px;
     }
-    .app-additional-list>li>.square{
+
+    .app-additional-list>li>.square {
         width: 8px !important;
         height: 8px !important;
         margin-right: 0;
     }
-    .overview-table-box{
+
+    .overview-table-box {
         padding: 0;
     }
-    .overiew-table th, .overiew-table td{
+
+    .overiew-table th,
+    .overiew-table td {
         padding: 8px 10px;
         font-size: 12px;
     }
 }
 
 @media only screen and (max-width:768px) {
-    .app-details-nav-map{
+    .app-details-nav-map {
         display: none;
     }
-    .container-app-details{
+
+    .container-app-details {
         padding: 30px;
     }
-    
 }
